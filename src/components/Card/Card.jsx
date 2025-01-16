@@ -3,27 +3,35 @@ import { Inputbutton } from "../inputbutton";
 import logo from '../../../image/pikachu.png';
 import styles from './Card.module.css';
 
-export function Card(props){
+export function Card({ id, nome, types,sprite  }) {
+
     return (
         <div className={styles.Card}>
-            <img id={styles.logo}src={ logo }/>
+                        <img 
+                id={styles.sprite} 
+                src={sprite} 
+                alt={`${nome} sprite`} 
+            />
             <div>
                 <h1 id="name">
-                <InputText
-                    id={styles.id}
-                    type="text"
-                    value={props.value}
-                    min="0"
-                    readOnly
-                />
+                    <InputText
+                        id={styles.id}
+                        type="text"
+                        value={nome}
+                        min="0"
+                        readOnly
+                    />
                 </h1>
                 <div id={styles.typeDiv}>
-                    
-                <Inputbutton id={styles.Normal} className={styles.type} content="Normal" />
-                <Inputbutton id={styles.Eletric} className={styles.type} content="Eletric" />
+                    {types.map((type, index) => (
+                        <Inputbutton 
+                            key={index} 
+                            className={`${styles.type} ${styles[type] || ""}`} 
+                            content={type} 
+                        />
+                    ))}
                 </div>
-                
             </div>
         </div>
-    )
+    );
 }

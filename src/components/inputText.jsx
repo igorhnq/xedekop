@@ -3,7 +3,6 @@ export function InputText(props) {
         <input type={props.type} 
         id={props.id} 
         name={props.name} 
-        // className={styles.inputext} 
         placeholder = {props.placeholder} 
         readOnly={props.readOnly} 
         disabled={props.disabled} 
