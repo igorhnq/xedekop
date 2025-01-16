@@ -3,5 +3,31 @@
     justify-content: center;
     padding: 2rem;
 
-    background-color: blue;
+    background-color: #0f0f0fbd;
+    color: white;
+}
+
+.searchBar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    margin: 1rem 2rem 1rem 2rem;
+
+    background-color: rgba(255, 255, 255, 0.733);
+    border: 1px solid #0f0f0f49;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    padding: .5rem;
+    
+}
+
+.searchBar input {
+    background-color: rgba(255, 255, 255, 0.733);
+    outline: none;
+    border: none;
+    width: 90%;
+    color: #0f0f0fab;
+    font-weight: 500;
+    font-size: 1.1rem;
 }
