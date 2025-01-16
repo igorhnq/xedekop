@@ -24,4 +24,18 @@
 
 #id{
     text-align: center;
+    border: none;
+    background-color: transparent;
+}
+
+#Eletric{
+    background-color: yellow;
+}
+
+#Normal{
+    background-color:#a6a696;
+}
+
+#Fire{
+    background-color: red;
 }

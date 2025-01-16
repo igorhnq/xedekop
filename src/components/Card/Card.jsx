@@ -3,7 +3,7 @@ import { Inputbutton } from "../inputbutton";
 import logo from '../../../image/pikachu.png';
 import styles from './Card.module.css';
 
-export function Card(){
+export function Card(props){
     return (
         <div className={styles.Card}>
             <img id={styles.logo}src={ logo }/>
@@ -12,16 +12,15 @@ export function Card(){
                 <InputText
                     id={styles.id}
                     type="text"
-                    name="Tax"
-                    value="Pikachu"
-                    placeholder="Tax"
+                    value={props.value}
                     min="0"
                     readOnly
                 />
                 </h1>
                 <div id={styles.typeDiv}>
-                <Inputbutton className={styles.type} content="Eletric" />
-                <Inputbutton className={styles.type} content="Normal" />
+                    
+                <Inputbutton id={styles.Normal} className={styles.type} content="Normal" />
+                <Inputbutton id={styles.Eletric} className={styles.type} content="Eletric" />
                 </div>
                 
             </div>
