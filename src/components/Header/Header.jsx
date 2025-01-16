@@ -1,8 +1,9 @@
+import styles from './Header.module.css'
+
 export function Header() {
     return (
-        <header>
+        <header className={styles.header}  >
             <h1>Xedekop</h1>
-            <h2>teste lucas</h2>
         </header>
     )
 }
