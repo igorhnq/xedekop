@@ -1,0 +1,27 @@
+.Card{
+    border: 1px solid red;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+#logo{
+    width: 8rem;
+    height: 8rem;
+}
+
+#typeDiv{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.type{
+    width: 100%;
+}
+
+#id{
+    text-align: center;
+}

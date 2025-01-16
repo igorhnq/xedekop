@@ -1,5 +1,7 @@
-import { Card } from './components/Card'
+import { Card } from './components/Card/Card'
 import { Header } from "./components/Header/Header"
+import './app.css'
+
 
 function App() {
   return (
