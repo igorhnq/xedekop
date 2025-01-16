@@ -51,10 +51,7 @@ export function Header() {
             <div className={styles.typeCardContainer}>
                 {pokemonTypes.map((type) => (
                     <div key={type.name} 
-                        className={styles.typeCard}
-                        style={{
-                            backgroundColor: typeColors[type.name]
-                        }}
+                    className={`${styles.typeCard} ${styles[type.name] || ""}`} 
                         >
                         <h2>{type.name}</h2>
                     </div>

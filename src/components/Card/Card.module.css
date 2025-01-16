@@ -1,3 +1,4 @@
+@import url('../../global_type_color.css');
 
 .Card{
     border: 1px solid red;
@@ -29,57 +30,3 @@
     background-color: transparent;
 }
 
-.grass {
-    background-color: var(--grass);
-}
-.poison {
-    background-color: var(--poison);
-}
-.fire {
-    background-color: var(--fire)
-}
-.normal{
-    background-color: var(--normal);
-}
-.fighting{
-    background-color: var(--fighting);
-}
-.flying{
-    background-color: var(--flying);
-}
-.ground{
-    background-color: var(--ground);
-}
-.rock{
-    background-color: var(--rock);
-}
-.bug{
-    background-color: var(--bug);
-}
-.ghost{
-    background-color: var(--ghost);
-}
-.steel{
-    background-color: var(--steel);
-}
-.water{
-    background-color: var(--water);
-}
-.electric{
-    background-color: var(--electric);
-}
-.psychic{
-    background-color: var(--psychic);
-}
-.ice{
-    background-color: var(--ice);
-}
-.dragon{
-    background-color: var(--dragon);
-}
-.dark{
-    background-color: var(--dark);
-}
-.fairy{
-    background-color: var(--fairy);
-}

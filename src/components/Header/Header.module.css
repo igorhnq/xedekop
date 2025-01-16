@@ -1,3 +1,5 @@
+@import url('../../global_type_color.css');
+
 .header {
     display: flex;
     justify-content: center;
