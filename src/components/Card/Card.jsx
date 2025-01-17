@@ -1,6 +1,5 @@
 import { InputText } from "../inputText";
 import { Inputbutton } from "../inputbutton";
-import logo from '../../../image/pikachu.png';
 import styles from './Card.module.css';
 
 export function Card({ id, nome, types,sprite  }) {
