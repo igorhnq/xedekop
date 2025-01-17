@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card } from "../Card/Card";
 import styles from "./Home.module.css"
 
-export function Home() {
+export function Home({ searchPokemon }) {
   const [pokemons, setpokemons] = useState([]);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ export function Home() {
   }, []);
 
   async function getpokemons() {
-      const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1302');
+      const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=45');
       const data = await response.json();
 
       const detailedPokemons = await Promise.all(
@@ -33,11 +33,15 @@ export function Home() {
       setpokemons(detailedPokemons);
   }
 
+  const filteredPokemons = pokemons.filter((poke) =>
+        poke.nome.toLowerCase().includes(searchPokemon.toLowerCase())    
+    )
+
   return (
       <div>
-          {pokemons.length > 0 ? (
+          {filteredPokemons.length > 0 ? (
               <div id={styles.cardloc} >
-                  {pokemons.map((poke) => (
+                  {filteredPokemons.map((poke) => (
                       <Card 
                           key={poke.id} 
                           id={poke.id} 

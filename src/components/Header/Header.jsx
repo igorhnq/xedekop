@@ -24,8 +24,12 @@ const typeColors = {
     fairy: '#EE99AC',
 };
 
-export function Header() {
+export function Header({ searchPokemon, setSearchPokemon }) {
     const [pokemonTypes, setPokemonTypes] = useState([])
+
+    const handleSearchChange = (event) => {
+        setSearchPokemon(event.target.value)
+    }
 
     useEffect(() => {
         async function fetchPokemonType() {
@@ -45,7 +49,12 @@ export function Header() {
 
             <div className={styles.searchBar}>
                 <MagnifyingGlass/>
-                <input type="text" placeholder='Pesquisar...' />
+                <input 
+                    type="text" 
+                    placeholder='Pesquisar...' 
+                    value={searchPokemon}
+                    onChange={handleSearchChange}
+                    />
             </div>
             
             <div className={styles.typeCardContainer}>

@@ -1,18 +1,18 @@
-import { Card } from './components/Card/Card'
+import { useState } from 'react';
 import { Header } from "./components/Header/Header"
-import './app.css'
 import { Home } from "./components/Home/Home";
+import './app.css'
 
 function App() {
-
-  return (
-<div>
-    <Header/>
-    <body id='body'>
-      <Home/>
-    </body>
-</div>
-
-  )
+    const [searchPokemon, setSearchPokemon] = useState('')
+    
+    return (
+        <div>
+            <Header searchPokemon={searchPokemon} setSearchPokemon={setSearchPokemon} />
+            <body id='body'>
+                <Home searchPokemon={searchPokemon} />
+            </body>
+        </div>
+    )
 }
 export default App
