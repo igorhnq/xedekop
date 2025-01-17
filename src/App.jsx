@@ -5,12 +5,20 @@ import './app.css'
 
 function App() {
     const [searchPokemon, setSearchPokemon] = useState('')
+    const [selectedType, setSelectedType] = useState(null)
     
     return (
         <div>
-            <Header searchPokemon={searchPokemon} setSearchPokemon={setSearchPokemon} />
+            <Header 
+                searchPokemon={searchPokemon} 
+                setSearchPokemon={setSearchPokemon}
+                setSelectedType={setSelectedType}
+                />
             <body id='body'>
-                <Home searchPokemon={searchPokemon} />
+                <Home 
+                    searchPokemon={searchPokemon}
+                    selectedType={selectedType}
+                />
             </body>
         </div>
     )

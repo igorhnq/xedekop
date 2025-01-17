@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card } from "../Card/Card";
 import styles from "./Home.module.css"
 
-export function Home({ searchPokemon }) {
+export function Home({ searchPokemon, selectedType }) {
   const [pokemons, setpokemons] = useState([]);
 
   useEffect(() => {
@@ -34,7 +34,8 @@ export function Home({ searchPokemon }) {
   }
 
   const filteredPokemons = pokemons.filter((poke) =>
-        poke.nome.toLowerCase().includes(searchPokemon.toLowerCase())    
+        poke.nome.toLowerCase().includes(searchPokemon.toLowerCase()) &&
+        (selectedType ? poke.types.includes(selectedType) : true) 
     )
 
   return (
