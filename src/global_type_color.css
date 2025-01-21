@@ -52,3 +52,9 @@
 .fairy{
     background-color: var(--fairy);
 }
+.stellar{
+    background-color: var(--stellar);
+}
+.unknown{
+    background-color: var(--unknown);
+}
