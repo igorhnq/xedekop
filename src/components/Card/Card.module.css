@@ -1,7 +1,6 @@
 @import url('../../global_type_color.css');
 
 .Card{
-    border: 1px solid red;
     width: 200px;
     display: flex;
     justify-content: center;
