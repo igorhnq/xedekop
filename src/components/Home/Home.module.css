@@ -1,6 +1,31 @@
+@import url('../../global_type_color.css');
+
 #cardloc{
     display: flex;
     flex-wrap: wrap;
     gap: .4rem;
     justify-content: center;
+}
+
+.selectedTypes {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.typeButton {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.typeButton:hover {
+    transform: scale(1.05);
 }

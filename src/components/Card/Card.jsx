@@ -2,11 +2,11 @@ import { InputText } from "../inputText";
 import { Inputbutton } from "../inputbutton";
 import styles from './Card.module.css';
 
-export function Card({ id, nome, types,sprite  }) {
+export function Card({ id, nome, types, sprite, onTypeClick }) {
 
     return (
         <div className={styles.Card}>
-                        <img 
+            <img 
                 id={styles.sprite} 
                 src={sprite} 
                 alt={`${nome} sprite`} 
@@ -17,7 +17,6 @@ export function Card({ id, nome, types,sprite  }) {
                         id={styles.id}
                         type="text"
                         value={nome}
-                        min="0"
                         readOnly
                     />
                 </h1>
@@ -26,7 +25,8 @@ export function Card({ id, nome, types,sprite  }) {
                         <Inputbutton 
                             key={index} 
                             className={`${styles.type} ${styles[type] || ""}`} 
-                            content={type} 
+                            content={type}
+                            onClick={() => onTypeClick(type)}
                         />
                     ))}
                 </div>
