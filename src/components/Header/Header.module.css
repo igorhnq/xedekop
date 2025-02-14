@@ -68,3 +68,135 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+/* Container que agrupa os botões */
+.selectedTypes {
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente (se tiver altura) */
+    flex-wrap: wrap;          /* Quebra linha se ultrapassar a largura */
+    gap: 12px;                /* Espaço entre os botões */
+    margin: 20px 0;           /* Espaço em cima e embaixo */
+}
+
+/* Botões de tipo */
+.typeButton {
+    display: inline-flex;      /* Para alinhar o texto e o X na horizontal */
+    align-items: center;       /* Centralizar verticalmente o conteúdo */
+    background-color: #f5f5f5; /* Cor padrão, caso não haja classe de tipo */
+    color: #333;
+    border: none;
+    outline: none;             /* Remove a borda de foco */
+    padding: 8px 16px;
+    border-radius: 9999px;     /* Deixa no formato "pill" */
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize; /* "fire" -> "Fire" */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.typeButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.typeButton:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Ícone de fechar (X) */
+.closeIcon {
+    margin-left: 8px; /* Espaço entre o texto do tipo e o X */
+    font-weight: bold;
+}
+
+/* Remover outline ao focar no botão */
+.typeButton:focus {
+    outline: none;
+}
+
+.ground {
+    background-color: var(--ground);
+    color: #fff;
+}
+.grass {
+    background-color: var(--grass);
+    color: #fff;
+}
+.poison {
+    background-color: var(--poison);
+    color: #fff;
+}
+.fire {
+    background-color: var(--fire);
+    color: #fff;
+}
+.normal{
+    background-color: var(--normal);
+    color: #fff;
+}
+.fighting{
+    background-color: var(--fighting);
+    color: #fff;
+}
+.flying{
+    background-color: var(--flying);
+    color: #fff;
+}
+.ground{
+    background-color: var(--ground);
+    color: #fff;
+}
+.rock{
+    background-color: var(--rock);
+    color: #fff;
+}
+.bug{
+    background-color: var(--bug);
+    color: #fff;
+}
+.ghost{
+    background-color: var(--ghost);
+    color: #fff;
+}
+.steel{
+    background-color: var(--steel);
+    color: #fff;
+}
+.water{
+    background-color: var(--water);
+    color: #fff;
+}
+.electric{
+    background-color: var(--electric);
+    color: #fff;
+}
+.psychic{
+    background-color: var(--psychic);
+    color: #fff;
+}
+.ice{
+    background-color: var(--ice);
+    color: #fff;
+}
+.dragon{
+    background-color: var(--dragon);
+    color: #fff;
+}
+.dark{
+    background-color: var(--dark);
+    color: #fff;
+}
+.fairy{
+    background-color: var(--fairy);
+    color: #fff;
+}
+.stellar{
+    background-color: var(--stellar);
+    color: #fff;
+}
+.unknown{
+    background-color: var(--unknown);
+    color: #fff;
+}
